@@ -881,7 +881,7 @@ class OplogThread(threading.Thread):
                 # read_last_checkpoint.
                 oplog_dict.pop(str(self.oplog), None)
                 oplog_dict[self.replset_name] = self.checkpoint
-                LOG.debug("OplogThread: oplog checkpoint updated to %s" %
+                LOG.info("OplogThread: oplog checkpoint updated to %s" %
                           str(self.checkpoint))
         else:
             LOG.debug("OplogThread: no checkpoint to update.")
